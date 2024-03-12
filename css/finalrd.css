@@ -1,0 +1,87 @@
+/*final round pg */
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    padding: 4rem;
+}
+
+.turn {
+    font-size: x-small;
+    text-align: center;
+}
+
+.finalcat {
+    background-color: lightblue;
+    text-align: center;
+    border: black solid thin;
+    width: 90%;
+    margin: 1.1rem;
+   
+}
+
+.finalques {
+    background-color: lightblue;
+    text-align: center;
+    padding: 3rem;
+    border: black solid thin;
+    margin: 1rem;
+}
+
+.UserInput {
+    text-align: center;
+    padding: 1rem;
+}
+
+.UserInput2 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.betBtn {
+    text-align: center;
+}
+
+.foot {
+    background-color: blueviolet;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .finalContainer {
+     align-self: center;
+}
+.title {
+    color: red;
+    font-size: 3rem;
+    text-align: center;
+    padding: 4rem;
+}
+    .finalcat {
+        background-color: lightblue;
+        border: black solid thin;
+        padding: .5rem;
+        text-align: center;
+        margin: auto;
+}
+    
+    .finalques {
+        background-color: lightblue;
+        padding: 5rem;
+        border: black solid thin;
+        margin: 1rem;
+        width: 25rem ;
+        height: 3rem;
+}
+
+}
