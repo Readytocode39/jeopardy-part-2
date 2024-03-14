@@ -1,15 +1,13 @@
-
-// let turn = document.getElementById('turn')
-
-
 // Do not change the import statement
 import placeholderQuestions from "./placeholder-questions.js";
 console.log({ placeholderQuestions });
 
+//creating variable to diable buttons
 // const button = document.getElementById("guess", "pass", "nextRd");
 // button.disabled = true;
 
-//SETTING UP ROUND ONE QUESTIONS
+
+//CREATED VARIABLES FOR RD ONE PT ELEMENTS
 
 //creating a variable for round 1 class of 200 pt elements
 const rd1TwoEl = document.querySelectorAll(".two")
@@ -27,33 +25,41 @@ const rd1EightEl = document.querySelectorAll(".eight")
 const rd1OneEl = document.querySelectorAll(".one")
 
 
+//CREATED VARIABLES FOR RD TWO PT ELEMENTS
 
-
-//creating a variable for round 1 class of 200 pt elements
+//creating a variable for round 2 class of 200 pt elements
 const rd2FourEl = document.querySelectorAll(".four2")
 
-//creating a variable for round 1 class of 400 pt elements
+//creating a variable for round 2 class of 400 pt elements
 const rd2EightEl = document.querySelectorAll(".eight2")
 
-//creating a variable for round 1 class of 600 pt elements
+//creating a variable for round 2 class of 600 pt elements
 const rd2TwelveEl = document.querySelectorAll(".twelve")
 
-//creating a variable for round 1 class of 800 pt elements
+//creating a variable for round 2 class of 800 pt elements
 const rd2SixteenEl = document.querySelectorAll(".sixteen")
 
-//creating a variable for round 1 class of 1000 pt elements
+//creating a variable for round 2 class of 1000 pt elements
 const rd2TwoEl = document.querySelectorAll(".two2")
+
 
 //created variable to display questions
 const quesDisplay = document.querySelector(".quesDisplay")
+
 
 //created variable for players answer
 const playerAnswer = document.querySelector("#playerAnswer")
 console.log(playerAnswer.value) //empty string until player enters value
 
+
+//created variable for guess element in html
 const guess = document.querySelector(".guess")
 
-//creating variables for round one and round two categorie questions.
+
+//const turn = document.getElementById('turn')
+
+
+//CREATED VARIABLES FOR ROUND ONE AND ROUND TWO CATAGORIE QUESTIONS
 let natRd1 = placeholderQuestions.slice(0, 5);
 let natRd2 = placeholderQuestions.slice(5, 10);
 
@@ -77,19 +83,23 @@ let hisRd2 = placeholderQuestions.slice(45, 50)
 let genRd1 = placeholderQuestions.slice(50, 55)
 let genRd2 = placeholderQuestions.slice(55, 60)
 
-//made variable with an array of round one questions
+
+//SETTING UP ROUND ONE QUESTIONS
+
+//made variable with an array of round one categories with questions
 const rd1Ques = [natRd1, animalRd1, compRd1, mythRd1, hisRd1, genRd1]
 console.log(rd1Ques)
 
-//made variable with an empty array to hold round one questions worth 200 pts.
+
+//made variable with an empty array that will hold round one questions worth 200 pts.
 let pt2Array = []
 
 
-//made a for each function that goes over all round 1 question categories and pushes to pt2Array the 1st question of each categorie.
+//made a for each function that goes over all round 1 categories and pushes to pt2Array the 1st question of each round 1 categorie.
 function pt2() {
     rd1Ques.forEach((question) => {
         pt2Array.push(question[0])
-       
+
     })
 }
 //calling for each function.
@@ -100,7 +110,7 @@ pt2()
 
 rd1TwoEl.forEach((element, index) => {
     element.addEventListener("click", () => {
-        
+
 
         for (let i = 0; i < pt2Array.length; i++) {
             let currQues = pt2Array[i]
@@ -125,7 +135,7 @@ rd1TwoEl.forEach((element, index) => {
 function guessBtn(currAnswer) {
     guess.addEventListener("click", () => {
         if (playerAnswer.value === currAnswer) {
-            
+
             console.log("correct")
         } else {
             console.log("incorrect")
@@ -135,11 +145,11 @@ function guessBtn(currAnswer) {
 }
 
 
-//made variable with an empty array to hold round one questions worth 400 pts.
+//made variable with an empty array that will hold round one questions worth 400 pts.
 let pt4Array = []
 
 
-//made a for each function that goes over all round 1 question categories and pushes to pt4Array the 2nd question of each categorie.
+//made a for each function that goes over all round 1 categories and pushes to pt4Array the 2nd question of each categorie.
 function pt4() {
     rd1Ques.forEach((question) => {
         pt4Array.push(question[1])
@@ -161,11 +171,11 @@ rd1FourEl.forEach((element, index) => {
 });
 
 
-//made variable with an empty array to hold round one questions worth 600 pts.
+//made variable with an empty array that will hold round one questions worth 600 pts.
 let pt6Array = []
 
 
-//made a for each function that goes over all round 1 question categories and pushes to pt6Array the 3rd question of each categorie.
+//made a for each function that goes over all round 1 categories and pushes to pt6Array the 3rd question of each categorie.
 function pt6() {
     rd1Ques.forEach((question) => {
         pt6Array.push(question[2])
@@ -187,11 +197,11 @@ rd1SixEl.forEach((element, index) => {
 });
 
 
-//made variable with an empty array to hold round one questions worth 800 pts.
+//made variable with an empty array that will hold round one questions worth 800 pts.
 let pt8Array = []
 
 
-//made a for each function that goes over all round 1 question categories and pushes to pt8Array the 4th question of each categorie.
+//made a for each function that goes over all round 1 categories and pushes to pt8Array the 4th question of each categorie.
 function pt8() {
     rd1Ques.forEach((question) => {
         pt8Array.push(question[3])
@@ -213,11 +223,11 @@ rd1EightEl.forEach((element, index) => {
 });
 
 
-//made variable with an empty array to hold round one questions worth 1000 pts.
+//made variable with an empty array that will hold round one questions worth 1000 pts.
 let pt1Array = []
 
 
-//made a for each function that goes over all round 1 question categories and pushes to pt1Array the 5th question of each categorie.
+//made a for each function that goes over all round 1 categories and pushes to pt1Array the 5th question of each categorie.
 function pt1() {
     rd1Ques.forEach((question) => {
         pt1Array.push(question[4])
@@ -241,15 +251,15 @@ rd1OneEl.forEach((element, index) => {
 
 //SETTING UP ROUND TWO QUESTIONS
 
-//made variable with an array of round two questions
+//made variable with an array of round two categories with questions
 const rd2Ques = [natRd2, animalRd2, compRd2, mythRd2, hisRd2, genRd2]
 console.log(rd2Ques)
 
-//made variable with an empty array to hold round two questions worth 400 pts.
+//made variable with an empty array that will hold round two questions worth 400 pts.
 let pt42Array = []
 
 
-//made a for each function that goes over all round 2 question categories and pushes to pt42Array the 1st question of each categorie.
+//made a for each function that goes over all round 2 categories and pushes to pt42Array the 1st question of each categorie.
 function pt42() {
     rd2Ques.forEach((question) => {
         pt42Array.push(question[0])
@@ -258,11 +268,9 @@ function pt42() {
 //calling for each function.
 pt42()
 
-//creating for each function that is taking each round two 400 elements and adding an addeventlistener to it
+//creating for each function with for loop, that is taking each round two 400 elements and adding an addeventlistener to it, so when element is clicked 1st question of each categorie will be shown
 rd2FourEl.forEach((element, index) => {
     element.addEventListener("click", () => {
-
-        //creating for each function with for loop, that is taking each round two 400 elements and adding an addeventlistener to it, so when element is clicked 1st question of each categorie will be shown
         for (let i = 0; i < pt42Array.length; i++) {
             let currQues = pt42Array[i]
             if (index === i) {
@@ -273,11 +281,11 @@ rd2FourEl.forEach((element, index) => {
 });
 
 
-//made variable with an empty array to hold round two questions worth 800 pts.
+//made variable with an empty array that will hold round two questions worth 800 pts.
 let pt82Array = []
 
 
-//made a for each function that goes over all round 2 question categories and pushes to pt82Array the 2nd question of each categorie.
+//made a for each function that goes over all round 2 categories and pushes to pt82Array the 2nd question of each categorie.
 function pt82() {
     rd2Ques.forEach((question) => {
         pt82Array.push(question[1])
@@ -300,11 +308,11 @@ rd2EightEl.forEach((element, index) => {
 
 
 
-//made variable with an empty array to hold round two questions worth 1200 pts.
+//made variable with an empty array that will hold round two questions worth 1200 pts.
 let pt12Array = []
 
 
-//made a for each function that goes over all round 2 question categories and pushes to pt12Array the 3rd question of each categorie.
+//made a for each function that goes over all round 2 categories and pushes to pt12Array the 3rd question of each categorie.
 function pt12() {
     rd2Ques.forEach((question) => {
         pt12Array.push(question[2])
@@ -326,12 +334,11 @@ rd2TwelveEl.forEach((element, index) => {
 });
 
 
-
-//made variable with an empty array to hold round two questions worth 1600 pts.
+//made variable with an empty array that will hold round two questions worth 1600 pts.
 let pt16Array = []
 
 
-//made a for each function that goes over all round 2 question categories and pushes to pt16Array the 4th question of each categorie.
+//made a for each function that goes over all round 2 categories and pushes to pt16Array the 4th question of each categorie.
 function pt16() {
     rd2Ques.forEach((question) => {
         pt16Array.push(question[3])
@@ -354,11 +361,11 @@ rd2SixteenEl.forEach((element, index) => {
 
 
 
-//made variable with an empty array to hold round two questions worth 2000 pts.
+//made variable with an empty array that will hold round two questions worth 2000 pts.
 let pt2000Array = []
 
 
-//made a for each function that goes over all round 2 question categories and pushes to pt2000Array the 5th question of each categorie.
+//made a for each function that goes over all round 2 categories and pushes to pt2000Array the 5th question of each categorie.
 function pt2000() {
     rd2Ques.forEach((question) => {
         pt2000Array.push(question[4])
@@ -380,7 +387,7 @@ rd2TwoEl.forEach((element, index) => {
 });
 
 
-
+//CREATING JEOPARDY CLASS TO KEEP TRACK OF PLAYERS SCORE
 
 // class Jeopardy {
 //     constructor(element, options = {}) {

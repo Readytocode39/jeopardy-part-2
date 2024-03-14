@@ -1,97 +1,100 @@
 /* main pg*/
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slidein {
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+#mainTitle {
+  color: red;
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.jeppic {
+  display: flex;
+  align-content: center;
+  width: 300px;
+  height: 200px;
+
+}
+
+.playbtn {
+  text-align: center;
+  padding: 3rem;
+}
+
+.foot {
+  background-color: blueviolet;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+  .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.slidein {
+    align-content: center;
+
+  }
+
+  .slidein {
     animation-duration: 5s;
     animation-name: slidein;
   }
-  
+
   @keyframes slidein {
     from {
       margin-left: 100%;
       width: 300%;
     }
-  
+
     to {
       margin-left: 0%;
       width: 100%;
     }
   }
-  
 
-#mainTitle {
+  #mainTitle {
     color: red;
-    font-size: 5rem;
+    font-size: 10rem;
     text-align: center;
-    padding: 2rem;
-}
+  }
 
-.jeppic {
-    display: flex;
-    align-content: center;
-    width: 300px ;
-    height: 200px;
-    
-}
-.playbtn {
-    text-align: center;
-    padding: 3rem;
-}
-
-.foot {
-    background-color: blueviolet;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-}
-
-
-@media screen and (min-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        
-    }
-    .slidein {
-        animation-duration: 5s;
-        animation-name: slidein;
-      }
-      
-      @keyframes slidein {
-        from {
-          margin-left: 100%;
-          width: 300%;
-        }
-      
-        to {
-          margin-left: 0%;
-          width: 100%;
-        }
-      }
-
-    #mainTitle {
-        color: red;
-        font-size: 10rem;
-        text-align: center;
-    }
-    
-    .jeppic {
+  .jeppic {
     display: flex;
     width: 800px;
     height: 350px;
     align-self: center;
     margin-left: 11rem;
-    }
-    
-    .playbtn {
+  }
+
+  .playbtn {
     text-align: center;
     padding: 5rem;
-    }
+  }
 
 }

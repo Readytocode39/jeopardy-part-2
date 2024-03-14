@@ -25,15 +25,16 @@
 
 .grid-items {
     display: grid;
-    grid-template-columns: 
-    auto auto auto auto auto auto;
-    grid-template-rows: 
-    auto auto auto auto auto auto;
+    grid-template-columns:
+        auto auto auto auto auto auto;
+    grid-template-rows:
+        auto auto auto auto auto auto;
     font-size: xx-small;
     text-align: center;
 
-    
+
 }
+
 .item1 {
     border: black solid thin;
     background-color: blue;
@@ -60,7 +61,7 @@
 .pass {
     margin: 1rem;
     float: right;
-    padding-right: 6rem ;
+    padding-right: 6rem;
 }
 
 .player1Score {
@@ -77,11 +78,7 @@
     padding: 1rem;
 }
 
-.score-count1
-
-.score-count2
-
-.nextRd {
+.score-count1 .score-count2 .nextRd {
     float: right;
     margin: 2rem;
 }
@@ -95,88 +92,89 @@
 }
 
 @media screen and (min-width: 768px) {
-    
-.container1 {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-   }
-   
-.title {
-       color: red;
-       font-size: 3rem;
-       text-align: center;
-       padding: 4rem;
-   }
-   
-.turn {
-       font-size: large;
-       text-align: center;
-}
-   
-   .grid-parent {
-    border: solid thick rgb(243, 229, 124);
-    width: 80%;
-    align-self: center;
 
-}
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.grid-items {
-    display: grid;
-    grid-template-columns: 
-    auto auto auto auto auto auto;
-    grid-template-rows: 
-    auto auto auto auto auto auto;
-    font-size: large;
-    text-align: center;
+    .title {
+        color: red;
+        font-size: 3rem;
+        text-align: center;
+        padding: 4rem;
+    }
 
-    
-}
-.item1 {
-    border: black solid thin;
-    background-color: blue;
-    color: white;
-    padding: 1rem;
-}
-   
-.UserInput {
-       text-align: center;
-       padding: 1rem;
-}
-   
-   /* guess and pass button*/
-   
-.guess {
-       margin-left: 37rem;
-       float: left;
-       padding-left: 2rem;
-}
-   
-.pass {
-       margin-right: 37rem;
-       float: right;
-       padding-right: 2rem;
-}
-   
-.player1 {
-       float: left;
-       margin-left: 10rem;
-       font-size: larger;
-       padding: 1rem;
- }
-   
-.player2 {
-       float: right;
-       margin-right: 10rem;
-       font-size: larger;
-       padding: 1rem;
-}
-   
-.nextRd {
-       
-       margin: right;
-       padding-top: 7rem ;
-       
-}
-   
+    .turn {
+        font-size: large;
+        text-align: center;
+    }
+
+    .grid-parent {
+        border: solid thick rgb(243, 229, 124);
+        width: 80%;
+        align-self: center;
+
+    }
+
+    .grid-items {
+        display: grid;
+        grid-template-columns:
+            auto auto auto auto auto auto;
+        grid-template-rows:
+            auto auto auto auto auto auto;
+        font-size: large;
+        text-align: center;
+
+
+    }
+
+    .item1 {
+        border: black solid thin;
+        background-color: blue;
+        color: white;
+        padding: 1rem;
+    }
+
+    .UserInput {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    /* guess and pass button*/
+
+    .guess {
+        margin-left: 37rem;
+        float: left;
+        padding-left: 2rem;
+    }
+
+    .pass {
+        margin-right: 37rem;
+        float: right;
+        padding-right: 2rem;
+    }
+
+    .player1 {
+        float: left;
+        margin-left: 10rem;
+        font-size: larger;
+        padding: 1rem;
+    }
+
+    .player2 {
+        float: right;
+        margin-right: 10rem;
+        font-size: larger;
+        padding: 1rem;
+    }
+
+    .nextRd {
+
+        margin: right;
+        padding-top: 7rem;
+
+    }
+
 }
