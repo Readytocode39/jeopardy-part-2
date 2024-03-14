@@ -77,7 +77,10 @@
     padding: 1rem;
 }
 
-.score-count1 .score-count2 .nextRd {
+/*.score-count1 
+.score-count2 */
+
+.nextRd {
     float: right;
     margin: 2rem;
 }

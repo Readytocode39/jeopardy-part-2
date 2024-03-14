@@ -110,8 +110,6 @@ pt2()
 
 rd1TwoEl.forEach((element, index) => {
     element.addEventListener("click", () => {
-
-
         for (let i = 0; i < pt2Array.length; i++) {
             let currQues = pt2Array[i]
             if (index === i) {
@@ -135,7 +133,7 @@ rd1TwoEl.forEach((element, index) => {
 function guessBtn(currAnswer) {
     guess.addEventListener("click", () => {
         if (playerAnswer.value === currAnswer) {
-
+            
             console.log("correct")
         } else {
             console.log("incorrect")
