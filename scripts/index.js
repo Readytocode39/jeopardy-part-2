@@ -56,6 +56,18 @@ console.log(playerAnswer.value) //empty string until player enters value
 const guess = document.querySelector(".guess")
 
 
+
+//making variable to record score for player 1 and player 2
+const score1 = 0;
+const score2 = 0;
+
+
+//created score variable to keep track of player 1 and player 2 scores
+//score1 = document.querySelector(".score-count1")
+
+//score2 = document.querySelector(".score-count2")
+
+
 //const turn = document.getElementById('turn')
 
 
@@ -109,13 +121,16 @@ pt2()
 //creating for each function with for loop, that is taking each round one 200 elements and adding an addeventlistener to it, so when element is clicked 1st question of each categorie will be shown
 
 rd1TwoEl.forEach((element, index) => {
+    
     element.addEventListener("click", () => {
+        const rd1TwoElValue = (parseInt(element.innerHTML))
+        console.log(rd1TwoElValue)
         for (let i = 0; i < pt2Array.length; i++) {
             let currQues = pt2Array[i]
             if (index === i) {
 
                 quesDisplay.textContent = currQues.question
-                console.log(currQues, "GOTCHA")
+                console.log(currQues)
                 guessBtn(currQues.answer)
 
             }
@@ -131,9 +146,10 @@ rd1TwoEl.forEach((element, index) => {
 //function created to take current question's asnwer and compare it to players answer... If player's answer is equal to current question's answer then point value of question will be added to player's score... If player's answer is not equal to current question's answer then pt value of current question will be deducted from player's total score.
 
 function guessBtn(currAnswer) {
-    guess.addEventListener("click", () => {
+    guess.addEventListener("click", () => { 
         if (playerAnswer.value === currAnswer) {
             
+            console.log(currAnswer)
             console.log("correct")
         } else {
             console.log("incorrect")
@@ -269,6 +285,7 @@ pt42()
 //creating for each function with for loop, that is taking each round two 400 elements and adding an addeventlistener to it, so when element is clicked 1st question of each categorie will be shown
 rd2FourEl.forEach((element, index) => {
     element.addEventListener("click", () => {
+
         for (let i = 0; i < pt42Array.length; i++) {
             let currQues = pt42Array[i]
             if (index === i) {
@@ -385,36 +402,3 @@ rd2TwoEl.forEach((element, index) => {
 });
 
 
-//CREATING JEOPARDY CLASS TO KEEP TRACK OF PLAYERS SCORE
-
-// class Jeopardy {
-//     constructor(element, options = {}) {
-//         this.placeholderQuestions = [natRd1, natRd2, animalRd1, animalRd2, compRd1, compRd2, mythRd1, mythRd2, hisRd1, hisRd2, genRd1, genRd2];
-//         this.catagories = [];
-//         this.player1Score = 0;
-//         this.player2Score = 0;
-//         this.formElement = element.querySelector("form")
-//         this.scoreCountElement1 = element.querySelector(".score-count1")
-//         this.scoreCountElement2 = element.querySelector(".score-count2")
-
-//     }
-
-//method that starts game
-// initGame() {
-//     this.updateScore(0);
-
-// }
-//creating method that updates score
-//     updateScore(change) {
-//         this.player1Score += change;
-//         this.player2Score += change;
-//         this.scoreCountElement1.textContent = this.player1Score
-//         this.scoreCountElement2.textContent = this.player2Score;
-//     }
-// }
-
-//creating new instance of Jeopardy
-//const game = new Jeopardy(document.querySelector(".container1"), {});
-
-//calling startGame method
-// game.initGame
